@@ -1,0 +1,30 @@
+{
+  "name": "tutorialreversisvelte",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config ./config/vite.config.ts",
+    "build": "vite build --config ./config/vite.config.ts && npm run copy-backend && npm run copy-frontend",
+    "check": "svelte-check --tsconfig ./config/tsconfig.json",
+    "copy-backend": "copyfiles -u 1 'backend/**/*' remote",
+    "copy-frontend": "copyfiles -u 1 'frontend/tutorialreversisvelte.js' remote"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tsconfig/svelte": "^5.0.4",
+    "@types/node": "^22.10.3",
+    "copyfiles": "^2.4.1",
+    "sass": "^1.83.0",
+    "svelte": "^5.16.0",
+    "svelte-check": "^4.1.1",
+    "svelte-preprocess": "^6.0.3",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.6"
+  },
+  "description": "Board Game Arena 'Reversi' Tutorial using Svelte+Vite+TypeScript for frontend",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
